@@ -38,26 +38,26 @@ select:-ms-input-placeholder {
   font-size: inherit;
 }
 
-.head, .head .nav ul, .academy .academy-cont, .mba-sz-courses .courses-cont, .bottom .sign-in, .dialog .sign-in {
+.head, .head .nav ul, .academy .academy-cont, .lesson .l-cont, .form .sign-in, .apply ul, .bottom .wrap, .dialog .tel {
   zoom: 1;
 }
-.head:after, .head .nav ul:after, .academy .academy-cont:after, .mba-sz-courses .courses-cont:after, .bottom .sign-in:after, .dialog .sign-in:after {
+.head:after, .head .nav ul:after, .academy .academy-cont:after, .lesson .l-cont:after, .form .sign-in:after, .apply ul:after, .bottom .wrap:after, .dialog .tel:after {
   clear: both;
 }
-.head:before, .head .nav ul:before, .academy .academy-cont:before, .mba-sz-courses .courses-cont:before, .bottom .sign-in:before, .dialog .sign-in:before, .head:after, .head .nav ul:after, .academy .academy-cont:after, .mba-sz-courses .courses-cont:after, .bottom .sign-in:after, .dialog .sign-in:after {
+.head:before, .head .nav ul:before, .academy .academy-cont:before, .lesson .l-cont:before, .form .sign-in:before, .apply ul:before, .bottom .wrap:before, .dialog .tel:before, .head:after, .head .nav ul:after, .academy .academy-cont:after, .lesson .l-cont:after, .form .sign-in:after, .apply ul:after, .bottom .wrap:after, .dialog .tel:after {
   content: "";
   display: table;
 }
 
 .head .nav ul .line, .title .icon,
-.title span, .in span, .btn-wrap .btn, .dialog .d-subtitle, .dialog .item .i-key, .dialog .item span {
+.title span, .in span, .btn-wrap .btn, .lesson .l-cont .item a, .lesson .courses-btn .icon, .city .submit-btn, .dialog .item span {
   display: inline-block;
   *zoom: 1;
   *display: inline;
 }
 
 a:hover {
-  color: #c1182e;
+  color: #ea2100;
 }
 
 .wrap {
@@ -83,7 +83,7 @@ a:hover {
 .head .logo .name strong {
   color: #333;
 }
-.head .logo .apply {
+.head .logo .consult {
   width: 230px;
   height: 26px;
   font-size: 16px;
@@ -104,7 +104,8 @@ a:hover {
   cursor: pointer;
 }
 .head .nav ul li:hover {
-  color: #c1182e;
+  color: #ea2100;
+  font-weight: bold;
 }
 .head .nav ul .line {
   width: 7px;
@@ -127,18 +128,18 @@ a:hover {
 }
 
 .a-c {
-  color: #c1182e;
+  color: #ea2100;
 }
 
 .banner {
-  display: none;
   height: 564px;
-  background: url(../images/banner.png) no-repeat center;
+  background: url(../images/banner.png) no-repeat;
 }
 
 .title {
-  font-size: 44px;
+  margin-bottom: 16px;
   line-height: 44px;
+  font-size: 44px;
   letter-spacing: -1px;
   text-align: center;
 }
@@ -156,10 +157,9 @@ a:hover {
 }
 
 .more-than {
-  display: none;
   height: 507px;
   padding-top: 80px;
-  background: url(../images/bg_1.png) no-repeat top center;
+  background: url(../images/bg_1.png) no-repeat;
 }
 .more-than .title strong {
   color: #da3812;
@@ -178,11 +178,11 @@ a:hover {
 }
 
 .accpet {
-  display: none;
   padding: 79px 0 73px;
   background-color: #f2f9ff;
 }
 .accpet .a-cont {
+  padding-top: 66px;
   text-align: center;
 }
 .accpet .a-cont img {
@@ -197,6 +197,7 @@ a:hover {
 }
 
 .btn-wrap {
+  padding-top: 20px;
   text-align: center;
 }
 .btn-wrap .btn {
@@ -211,10 +212,11 @@ a:hover {
 }
 
 .academy {
-  display: none;
+  padding: 80px 0 70px;
 }
 .academy .academy-cont {
   width: 1110px;
+  padding-top: 38px;
   margin: 0 auto;
 }
 .academy .academy-cont .item {
@@ -312,62 +314,65 @@ a:hover {
 .academy .academy-cont .item:hover .detail {
   display: block;
 }
-
-.mba-sz-courses {
-  padding: 52px 0;
-  box-sizing: border-box;
-  background: url(https://img.thea.cn/public/platform/thea/201912/hbj/mba-sz/images/bg_3.png) no-repeat center;
+.academy:nth-of-type(2n) {
+  background-color: #f2f9ff;
 }
-.mba-sz-courses .mba-sz-title {
+
+.lesson {
+  padding: 57px 0 48px;
+  background: url(https://img.thea.cn/public/platform/thea/201912/hbj/mba-sz/images/bg_3.png) no-repeat top center;
+}
+.lesson .title {
   color: #fff;
 }
-.mba-sz-courses .courses-cont {
+.lesson .subtitle {
+  color: #cfdbff;
+}
+.lesson .l-cont {
+  width: 1220px;
+  margin: 0 auto;
   padding-top: 34px;
 }
-.mba-sz-courses .courses-cont .cont-item {
+.lesson .l-cont .item {
   float: left;
-  width: 181px;
+  width: 177px;
+  padding: 24px 0 18px;
+  margin: 0 22px 28px 0;
+  line-height: 26px;
   border-radius: 8px;
   border: solid 2px #839cee;
   color: #fff;
-  line-height: 26px;
   text-align: center;
-  padding: 24px 0 18px;
-  box-sizing: border-box;
-  margin-right: 22px;
-  margin-bottom: 28px;
 }
-.mba-sz-courses .courses-cont .cont-item:nth-of-type(6n + 6) {
-  margin-right: 0;
-}
-.mba-sz-courses .courses-cont .cont-item img {
+.lesson .l-cont .item img {
   margin-bottom: 14px;
 }
-.mba-sz-courses .courses-cont .cont-item .item-en {
+.lesson .l-cont .item .item-en {
   font-size: 14px;
 }
-.mba-sz-courses .courses-cont .cont-item .item-cn {
+.lesson .l-cont .item .item-cn {
   font-size: 20px;
   margin-bottom: 10px;
 }
-.mba-sz-courses .courses-cont .cont-item a {
+.lesson .l-cont .item a {
   padding: 0 11px;
-  font-size: 16px;
   height: 27px;
-  background-color: #f86132;
+  line-height: 26px;
+  font-size: 16px;
+  background-image: linear-gradient(107deg, #ff6951 0%, #d0280c 100%);
   border-radius: 4px;
   color: #fff;
 }
-.mba-sz-courses .courses-cont .cont-item:hover {
+.lesson .l-cont .item:hover {
   background: #fff;
 }
-.mba-sz-courses .courses-cont .cont-item:hover .item-en {
+.lesson .l-cont .item:hover .item-en {
   color: #666666;
 }
-.mba-sz-courses .courses-cont .cont-item:hover .item-cn {
+.lesson .l-cont .item:hover .item-cn {
   color: #444444;
 }
-.mba-sz-courses .courses-btn {
+.lesson .courses-btn {
   display: block;
   width: 200px;
   height: 48px;
@@ -380,45 +385,156 @@ a:hover {
   color: #2a4496;
   text-align: center;
 }
-.mba-sz-courses .courses-btn .icon {
+.lesson .courses-btn .icon {
   width: 14px;
   height: 11px;
   background: url(https://img.thea.cn/public/platform/thea/201912/hbj/mba-sz/images/icon_11.png) no-repeat;
   margin-left: 10px;
 }
 
+.form {
+  position: relative;
+  width: 1077px;
+  padding: 31px 0 63px 23px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 4px 4px 81px 0px rgba(15, 79, 182, 0.19);
+}
+.form p {
+  padding: 16px 0 40px;
+  line-height: 18px;
+  font-size: 18px;
+  text-align: center;
+}
+.form p span {
+  font-weight: bold;
+  color: #ea2100;
+}
+.form .circle {
+  position: absolute;
+  top: -30px;
+  left: -28px;
+  width: 86px;
+  height: 84px;
+  background: url(../images/c_1.png);
+}
+.form .item {
+  float: left;
+  padding: 0 10px;
+  margin-right: 10px;
+  line-height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
+  border-radius: 7px;
+  border: solid 1px #cdcdcd;
+  text-align: center;
+}
+.form .item span {
+  padding-left: 14px;
+  margin-left: 14px;
+  font-weight: normal;
+  background: url(../images/i-nor.png) no-repeat left;
+  cursor: pointer;
+}
+.form .item span.on {
+  background: url(../images/i-sel.png) no-repeat left;
+}
+.form input {
+  width: 170px;
+  padding-left: 6px;
+  margin-top: -2px;
+  line-height: 50px;
+  text-indent: 0;
+  font-weight: normal;
+}
+.form .btn {
+  width: 120px;
+}
+
+.city {
+  padding: 103px 0 98px;
+}
+.city .nobd {
+  padding: 0;
+  margin-right: 0;
+  border: 0;
+}
+.city .submit-btn {
+  width: 120px;
+  height: 51px;
+  padding: 0;
+  font-size: 20px;
+  background-image: linear-gradient(107deg, #ff6951 0%, #d0280c 100%);
+  border-radius: 7px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.apply {
+  padding: 44px 0 66px;
+  background: url(../images/bg_5.png) no-repeat center;
+}
+.apply .title {
+  margin-bottom: 54px;
+}
+.apply .apply-cont {
+  width: 1100px;
+  margin: 0 auto;
+  background: url(../images/apply.png) no-repeat;
+}
+.apply ul {
+  margin-right: -77px;
+}
+.apply ul li {
+  float: left;
+  width: 119px;
+  padding-top: 90px;
+  margin-right: 77px;
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
 #footer {
+  margin-top: 0;
   background: #333;
 }
 #footer p a {
   color: #999;
 }
 #footer p a:hover {
-  color: #c1182e;
+  color: #ea2100;
 }
 #footer .links a {
   color: #999;
 }
 
 .bottom-site {
-  display: none;
   width: 100%;
-  height: 120px;
+  height: 100px;
 }
 
 .bottom {
-  display: none;
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 194px;
-  margin-top: -74px;
+  height: 100px;
   background: url(../images/bottom.png) no-repeat center;
 }
+.bottom .wrap {
+  position: relative;
+}
+.bottom .close {
+  display: none;
+}
 .bottom .b-title {
-  margin-bottom: 18px;
-  line-height: 26px;
-  font-size: 24px;
+  float: left;
+  padding-top: 16px;
+  margin-left: 97px;
+  line-height: 35px;
+  font-size: 28px;
   font-weight: bold;
   color: #ffffff;
 }
@@ -426,28 +542,24 @@ a:hover {
   color: #fcc873;
 }
 .bottom .sign-in {
-  padding: 88px 0 0 160px;
-}
-.bottom .sign-in .close {
-  width: 20px;
-  height: 20px;
-  float: right;
-  cursor: pointer;
+  float: left;
+  padding-top: 35px;
+  margin-left: 28px;
 }
 .bottom .sign-in input {
   float: left;
-  width: 250px;
-  height: 44px;
-  margin-right: 20px;
-  font-size: 14px;
-  background-color: #fafafa;
+  width: 206px;
+  height: 39px;
+  line-height: 38px;
+  margin-right: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  background-color: #ffffff;
 }
 .bottom .sign-in input[type="submit"] {
-  width: 230px;
-  margin-right: 0;
-  font-size: 16px;
-  color: #c1182e;
-  background-color: #fcc873;
+  width: 120px;
+  color: #ea2100;
+  background-color: #ffc619;
 }
 
 .dialog {
@@ -458,92 +570,139 @@ a:hover {
   z-index: 300;
   left: 0;
   top: 0;
-  text-align: center;
+  background: url(https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/mask.png);
 }
 .dialog .model {
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-left: -300px;
-  margin-top: -200px;
-  width: 530px;
-  height: 400px;
-  padding: 0 35px;
+  margin-left: -306px;
+  margin-top: -218px;
+  width: 612px;
+  height: 436px;
   background: url(../images/dialog.png) no-repeat;
 }
 .dialog .close {
   position: absolute;
-  top: 2px;
-  right: 2px;
-  width: 15px;
-  height: 15px;
+  top: 3px;
+  right: 14px;
+  width: 22px;
+  height: 22px;
   cursor: pointer;
 }
-.dialog .d-title {
-  padding-top: 20px;
-  margin-bottom: 18px;
-  line-height: 26px;
-  font-size: 26px;
-  font-weight: bold;
-  color: #ffffff;
+.dialog .title {
+  padding-top: 26px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: #fff;
 }
-.dialog .d-title span {
-  color: #fcc873;
-}
-.dialog .d-subtitle {
-  height: 28px;
-  padding: 0 8px;
-  margin-bottom: 26px;
-  line-height: 28px;
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.9);
-  border: 1px solid #fff;
-  border-radius: 4px;
+.dialog .sign-in {
+  width: 505px;
+  height: 277px;
+  padding: 30px 23px 20px 30px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 6px;
 }
 .dialog .item {
-  color: #fff;
-  text-align: left;
-}
-.dialog .item .i-key {
-  padding-left: 32px;
   margin-bottom: 20px;
-  font-size: 16px;
-  font-weight: bold;
-  background: url(../images/icon_4.png) no-repeat center left;
-}
-.dialog .item:nth-of-type(2) .i-key {
-  margin-bottom: 20px;
+  line-height: 28px;
+  font-size: 18px;
+  color: #000;
+  border-radius: 7px;
 }
 .dialog .item span {
-  margin: 0 14px 20px 0;
-  line-height: 14px;
-  font-size: 14px;
-  padding-left: 18px;
-  background: url(../images/nor.png) no-repeat center left;
+  width: 84px;
+  padding-left: 26px;
+  margin-left: 16px;
+  line-height: 16px;
+  font-size: 16px;
+  color: #444;
+  background: url(../images/i-nor_2.png) no-repeat left center;
   cursor: pointer;
 }
 .dialog .item span.on {
-  background: url(../images/sel.png) no-repeat center left;
+  background: url(../images/i-sel_2.png) no-repeat left center;
 }
-.dialog .item span:nth-of-type(9) {
-  width: 54px;
+.dialog .item input {
+  width: 100%;
+  line-height: 48px;
+  border-radius: 8px;
+  font-weight: normal;
 }
-.dialog input {
+.dialog .tel {
+  height: 48px;
+  border-radius: 7px;
+  border: solid 1px #a6afca;
+}
+.dialog .tel input {
   float: left;
-  width: 260px;
-  height: 44px;
-  margin: 0 10px 10px 0;
-  font-size: 14px;
-  background-color: #fafafa;
+  width: 280px;
 }
-.dialog input:nth-of-type(2) {
-  margin-right: 0;
+.dialog .tel .submit-btn {
+  float: right;
+  width: 176px;
+  height: 48px;
+  background-image: linear-gradient(107deg, #ff6951 0%, #d0280c 100%);
+  box-shadow: 2px 2px 7px 0px rgba(241, 85, 32, 0.4);
+  border-radius: 7px;
+  color: #fff;
 }
-.dialog input[type="submit"] {
-  margin-right: 0;
+
+.side-nav {
+  position: fixed;
+  top: 30%;
+  right: 0;
+  z-index: 200;
+  width: 119px;
+  height: 218px;
+  background: url(../images/side-nav.png) no-repeat;
+}
+.side-nav ul {
+  padding-top: 16px;
   font-size: 16px;
-  color: #c1182e;
-  background-color: #fcc873;
+  text-align: center;
+  color: #fff;
+}
+.side-nav li {
+  height: 40px;
+  line-height: 40px;
+}
+.side-nav li a {
+  width: 100%;
+  color: #ffffff;
+}
+.side-nav li a:hover {
+  color: #ffbf22;
+  font-weight: bold;
+}
+.side-nav .tel, .side-nav .hint {
+  line-height: 20px;
+}
+.side-nav .tel {
+  padding-top: 10px;
+  font-size: 14px;
+}
+.side-nav .hint {
+  font-size: 12px;
+}
+.side-nav .black-to-top {
+  position: absolute;
+  bottom: 0;
+  left: 29px;
+  width: 56px;
+  height: 24px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1440px) {
+  .banner {
+    background: url(../images/banner.png) no-repeat center;
+  }
+
+  .more-than {
+    background: url(../images/bg_1.png) no-repeat center;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

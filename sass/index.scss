@@ -47,7 +47,7 @@ select {
   *zoom: 1;
   *display: inline;
 }
-$active-color: #c1182e;
+$active-color: #ea2100;
 a {
   &:hover {
     color: $active-color;
@@ -75,7 +75,7 @@ a {
         color: #333;
       }
     }
-    .apply {
+    .consult {
       width: 230px;
       height: 26px;
       font-size: 16px;
@@ -98,6 +98,7 @@ a {
         cursor: pointer;
         &:hover {
           color: $active-color;
+          font-weight: bold;
         }
       }
       .line {
@@ -127,13 +128,14 @@ a {
   color: $active-color;
 }
 .banner {
-  display: none;
+  // display: none;
   height: 564px;
-  background: url(../images/banner.png) no-repeat center;
+  background: url(../images/banner.png) no-repeat;
 }
 .title {
-  font-size: 44px;
+  margin-bottom: 16px;
   line-height: 44px;
+  font-size: 44px;
   letter-spacing: -1px;
   text-align: center;
   .icon,
@@ -151,10 +153,10 @@ a {
   }
 }
 .more-than {
-  display: none;
+  // display: none;
   height: 507px;
   padding-top: 80px;
-  background: url(../images/bg_1.png) no-repeat top center;
+  background: url(../images/bg_1.png) no-repeat;
   .title {
     strong {
       color: #da3812;
@@ -174,10 +176,11 @@ a {
   }
 }
 .accpet {
-  display: none;
+  // display: none;
   padding: 79px 0 73px;
   background-color: #f2f9ff;
   .a-cont {
+    padding-top: 66px;
     text-align: center;
     img {
       margin: 0 3px;
@@ -191,6 +194,7 @@ a {
   color: #444444;
 }
 .btn-wrap {
+  padding-top: 20px;
   text-align: center;
   .btn {
     @extend %in-b;
@@ -205,9 +209,11 @@ a {
   }
 }
 .academy {
-  display: none;
+  // display: none;
+  padding: 80px 0 70px;
   .academy-cont {
     width: 1110px;
+    padding-top: 38px;
     margin: 0 auto;
     @extend %clearfix;
     .item {
@@ -310,32 +316,35 @@ a {
       }
     }
   }
+  &:nth-of-type(2n) {
+    background-color: #f2f9ff;
+  }
 }
-.mba-sz-courses {
-  padding: 52px 0;
-  box-sizing: border-box;
-  background: url(https://img.thea.cn/public/platform/thea/201912/hbj/mba-sz/images/bg_3.png) no-repeat center;
-  .mba-sz-title {
+.lesson {
+  // display: none;
+  padding: 57px 0 48px;
+  background: url(https://img.thea.cn/public/platform/thea/201912/hbj/mba-sz/images/bg_3.png) no-repeat top center;
+  .title {
     color: #fff;
   }
-  .courses-cont {
+  .subtitle {
+    color: #cfdbff;
+  }
+  .l-cont {
+    width: 1220px;
+    margin: 0 auto;
     @extend %clearfix;
     padding-top: 34px;
-    .cont-item {
+    .item {
       float: left;
-      width: 181px;
+      width: 177px;
+      padding: 24px 0 18px;
+      margin: 0 22px 28px 0;
+      line-height: 26px;
       border-radius: 8px;
       border: solid 2px #839cee;
       color: #fff;
-      line-height: 26px;
       text-align: center;
-      padding: 24px 0 18px;
-      box-sizing: border-box;
-      margin-right: 22px;
-      margin-bottom: 28px;
-      &:nth-of-type(6n + 6) {
-        margin-right: 0;
-      }
       img {
         margin-bottom: 14px;
       }
@@ -347,10 +356,12 @@ a {
         margin-bottom: 10px;
       }
       a {
+        @extend %in-b;
         padding: 0 11px;
-        font-size: 16px;
         height: 27px;
-        background-color: #f86132;
+        line-height: 26px;
+        font-size: 16px;
+        background-image: linear-gradient(107deg, #ff6951 0%, #d0280c 100%);
         border-radius: 4px;
         color: #fff;
       }
@@ -378,6 +389,7 @@ a {
     color: #2a4496;
     text-align: center;
     .icon {
+      @extend %in-b;
       width: 14px;
       height: 11px;
       background: url(https://img.thea.cn/public/platform/thea/201912/hbj/mba-sz/images/icon_11.png) no-repeat;
@@ -385,8 +397,117 @@ a {
     }
   }
 }
+.form {
+  position: relative;
+  width: 1077px;
+  padding: 31px 0 63px 23px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 4px 4px 81px 0px rgba(15, 79, 182, 0.19);
+  p {
+    padding: 16px 0 40px;
+    line-height: 18px;
+    font-size: 18px;
+    text-align: center;
+    span {
+      font-weight: bold;
+      color: $active-color;
+    }
+  }
+  .circle {
+    position: absolute;
+    top: -30px;
+    left: -28px;
+    width: 86px;
+    height: 84px;
+    background: url(../images/c_1.png);
+  }
+  .sign-in {
+    @extend %clearfix;
+  }
+  .item {
+    float: left;
+    padding: 0 10px;
+    margin-right: 10px;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+    border-radius: 7px;
+    border: solid 1px #cdcdcd;
+    text-align: center;
+    span {
+      padding-left: 14px;
+      margin-left: 14px;
+      font-weight: normal;
+      background: url(../images/i-nor.png) no-repeat left;
+      cursor: pointer;
+      &.on {
+        background: url(../images/i-sel.png) no-repeat left;
+      }
+    }
+  }
+  input {
+    width: 170px;
+    padding-left: 6px;
+    margin-top: -2px;
+    line-height: 50px;
+    text-indent: 0;
+    font-weight: normal;
+  }
+  .btn {
+    width: 120px;
+  }
+}
+.city {
+  // display: none;
+  padding: 103px 0 98px;
+  .nobd{
+    padding: 0;
+    margin-right: 0;
+    border: 0;
+  }
+  .submit-btn {
+    @extend %in-b;
+    width: 120px;
+    height: 51px;
+    padding: 0;
+    font-size: 20px;
+    background-image: linear-gradient(107deg, #ff6951 0%, #d0280c 100%);
+    border-radius: 7px;
+    color: #ffffff;
+    text-align: center;
+  }
+}
+.apply {
+  padding: 44px 0 66px;
+  background: url(../images/bg_5.png) no-repeat center;
+  .title {
+    margin-bottom: 54px;
+  }
+  .apply-cont {
+    width: 1100px;
+    margin: 0 auto;
+    background: url(../images/apply.png) no-repeat;
+  }
+  ul {
+    @extend %clearfix;
+    margin-right: -77px;
+    li {
+      float: left;
+      width: 119px;
+      padding-top: 90px;
+      margin-right: 77px;
+      line-height: 18px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}
 
 #footer {
+  margin-top: 0;
   background: #333;
   p {
     a {
@@ -403,22 +524,30 @@ a {
   }
 }
 .bottom-site {
-  display: none;
+  // display: none;
   width: 100%;
-  height: 120px;
+  height: 100px;
 }
 .bottom {
-  display: none;
+  // display: none;
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 194px;
-  margin-top: -74px;
+  height: 100px;
   background: url(../images/bottom.png) no-repeat center;
+  .wrap {
+    position: relative;
+    @extend %clearfix;
+  }
+  .close {
+    display: none;
+  }
   .b-title {
-    margin-bottom: 18px;
-    line-height: 26px;
-    font-size: 24px;
+    float: left;
+    padding-top: 16px;
+    margin-left: 97px;
+    line-height: 35px;
+    font-size: 28px;
     font-weight: bold;
     color: #ffffff;
     span {
@@ -426,28 +555,23 @@ a {
     }
   }
   .sign-in {
-    @extend %clearfix;
-    padding: 88px 0 0 160px;
-    .close {
-      width: 20px;
-      height: 20px;
-      float: right;
-      cursor: pointer;
-    }
+    float: left;
+    padding-top: 35px;
+    margin-left: 28px;
     input {
       float: left;
-      width: 250px;
-      height: 44px;
-      margin-right: 20px;
-      font-size: 14px;
-      background-color: #fafafa;
+      width: 206px;
+      height: 39px;
+      line-height: 38px;
+      margin-right: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      background-color: #ffffff;
     }
     input[type="submit"] {
-      width: 230px;
-      margin-right: 0;
-      font-size: 16px;
+      width: 120px;
       color: $active-color;
-      background-color: #fcc873;
+      background-color: #ffc619;
     }
   }
 }
@@ -459,98 +583,141 @@ a {
   z-index: 300;
   left: 0;
   top: 0;
-  text-align: center;
+  background: url(https://img.thea.cn/public/platform/thea/202004/hbj/bw/images/mask.png);
   .model {
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -300px;
-    margin-top: -200px;
-    width: 530px;
-    height: 400px;
-    padding: 0 35px;
+    margin-left: -306px;
+    margin-top: -218px;
+    width: 612px;
+    height: 436px;
     background: url(../images/dialog.png) no-repeat;
   }
   .close {
     position: absolute;
-    top: 2px;
-    right: 2px;
-    width: 15px;
-    height: 15px;
+    top: 3px;
+    right: 14px;
+    width: 22px;
+    height: 22px;
     cursor: pointer;
   }
-  .d-title {
-    padding-top: 20px;
-    margin-bottom: 18px;
-    line-height: 26px;
-    font-size: 26px;
-    font-weight: bold;
-    color: #ffffff;
-    span {
-      color: #fcc873;
-    }
-  }
-  .d-subtitle {
-    @extend %in-b;
-    height: 28px;
-    padding: 0 8px;
-    margin-bottom: 26px;
-    line-height: 28px;
-    font-size: 15px;
-    color: rgba(255, 255, 255, 0.9);
-    border: 1px solid #fff;
-    border-radius: 4px;
+  .title {
+    padding-top: 26px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: #fff;
   }
   .sign-in {
-    @extend %clearfix;
+    width: 505px;
+    height: 277px;
+    padding: 30px 23px 20px 30px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 6px;
   }
   .item {
-    color: #fff;
-    text-align: left;
-    .i-key {
-      @extend %in-b;
-      padding-left: 32px;
-      margin-bottom: 20px;
-      font-size: 16px;
-      font-weight: bold;
-      background: url(../images/icon_4.png) no-repeat center left;
-    }
-    &:nth-of-type(2) {
-      .i-key {
-        margin-bottom: 20px;
-      }
-    }
+    margin-bottom: 20px;
+    line-height: 28px;
+    font-size: 18px;
+    color: #000;
+    border-radius: 7px;
     span {
       @extend %in-b;
-      margin: 0 14px 20px 0;
-      line-height: 14px;
-      font-size: 14px;
-      padding-left: 18px;
-      background: url(../images/nor.png) no-repeat center left;
+      width: 84px;
+      padding-left: 26px;
+      margin-left: 16px;
+      line-height: 16px;
+      font-size: 16px;
+      color: #444;
+      background: url(../images/i-nor_2.png) no-repeat left center;
       cursor: pointer;
       &.on {
-        background: url(../images/sel.png) no-repeat center left;
-      }
-      &:nth-of-type(9) {
-        width: 54px;
+        background: url(../images/i-sel_2.png) no-repeat left center;
       }
     }
-  }
-  input {
-    float: left;
-    width: 260px;
-    height: 44px;
-    margin: 0 10px 10px 0;
-    font-size: 14px;
-    background-color: #fafafa;
-    &:nth-of-type(2) {
-      margin-right: 0;
+    input {
+      width: 100%;
+      line-height: 48px;
+      border-radius: 8px;
+      font-weight: normal;
     }
   }
-  input[type="submit"] {
-    margin-right: 0;
+  .tel {
+    @extend %clearfix;
+    height: 48px;
+    border-radius: 7px;
+    border: solid 1px #a6afca;
+    input{
+      float: left;
+      width: 280px;
+    }
+    .submit-btn {
+      float: right;
+      width: 176px;
+      height: 48px;
+      background-image: linear-gradient(107deg, #ff6951 0%, #d0280c 100%);
+      box-shadow: 2px 2px 7px 0px rgba(241, 85, 32, 0.4);
+      border-radius: 7px;
+      color: #fff;
+    }
+  }
+}
+// 侧边导航
+.side-nav {
+  position: fixed;
+  top: 30%;
+  right: 0;
+  z-index: 200;
+  width: 119px;
+  height: 218px;
+  background: url(../images/side-nav.png) no-repeat;
+  ul {
+    padding-top: 16px;
     font-size: 16px;
-    color: $active-color;
-    background-color: #fcc873;
+    text-align: center;
+    color: #fff;
+  }
+  li {
+    height: 40px;
+    line-height: 40px;
+    a {
+      width: 100%;
+      color: #ffffff;
+      &:hover {
+        color: #ffbf22;
+        font-weight: bold;
+      }
+    }
+  }
+  .tel, .hint{
+    line-height: 20px;
+  }
+  .tel{
+    padding-top: 10px;
+    font-size: 14px;
+  }
+  .hint{
+    font-size: 12px;
+  }
+
+  .black-to-top{
+    position: absolute;
+    bottom: 0;
+    left: 29px;
+    width: 56px;
+    height: 24px;
+    cursor: pointer;
+  }
+}
+
+
+// 要适应 1440，1366和1280
+@media screen and (max-width: 1440px) {
+  .banner {
+    background: url(../images/banner.png) no-repeat center;
+  }
+  .more-than {
+    background: url(../images/bg_1.png) no-repeat center;
   }
 }

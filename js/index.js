@@ -1,49 +1,41 @@
 charset = 'UTF-8';
 $(function () {
-  // 单选
-  $('.radio span').each(function () {
-    $(this).click(function () {
-      $(this).addClass('on').siblings().removeClass('on');
+  // 点击事件
+  // params: 按钮，类名，提交按钮，学历和工作时间
+  function form(btn, className, submitBtn, userCon) {
+    $(btn).each(function () {
+      var that = this;
+      $(that).click(function () {
+        $(that).addClass(className).siblings().removeClass(className);
+      });
     });
-  });
-
-  // 多选
-  $('.multiple span').each(function () {
-    $(this).click(function () {
-      $(this).toggleClass('on');
-    });
-  });
-
-  // 弹窗按钮提交
-  $('.dialog .submit').click(function () {
-    var value = '';
-    $('.dialog .item .on').each(function () {
-      value += $(this).text() + '、';
-    });
-    $('.dialog .select').val(value);
-  });
+    $(submitBtn).click(function () {
+      var $pa = $(this).parent().parent();
+      var value = '';
+      $pa.find('.' + className).each(function () {
+        value += $(this).text() + '、';
+      });
+      $pa.find(userCon).val(value);
+    });;
+  }
+  form('.sign-in .item span', 'on', '.submit-btn', '.user-con');
 
   // 显示弹窗
-  $('.showDialog').click(function () {
+  $('.show-dialog').click(function () {
     $('.dialog').show();
   });
 
-  // 关闭底部
-  closeArea('.bottom', '.bottom .close');
   // 关闭弹窗
   closeArea('.dialog', '.dialog .close');
-  // 关闭右侧导航
-  closeArea('.right-nav', '.right-nav .close');
-  function closeArea(box, btn){
-    $(btn).click(function(){
+  function closeArea(box, btn, site) {
+    $(btn).click(function () {
       $(box).hide();
     });
   }
-  
 
   // 弹窗显示的次数
   if ($('.dialog').size() > 0) {
-    midtc('.dialog', '.close', 10000, 30000, 2);
+    midtc('.dialog', '.close', 20000, 60000, 2);
   }
   function midtc(ele, c, f, a, n) {
     var $par = $(ele);
@@ -63,6 +55,10 @@ $(function () {
     }
   }
 
-  // 轮播图
-  $(".slideTxtBox").slide({ autoPlay: true });
+  // 回到顶部
+  $('.black-to-top').click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+    });
+  });
 });
