@@ -637,7 +637,8 @@ a:hover {
 }
 .dialog .tel input {
   float: left;
-  width: 280px;
+  width: 320px;
+  text-align: center;
 }
 .dialog .tel .submit-btn {
   float: right;
